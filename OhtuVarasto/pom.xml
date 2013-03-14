@@ -25,11 +25,7 @@
     </dependencies>
     
     <build>
-        <plugins>
-           <plugins>
-            //
-            // älä koske olemassaoleviin plugineihin!
-            //            
+        <plugins>                    
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -42,7 +38,6 @@
                 </configuration>
             </plugin>
 
-       </plugins>  
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
