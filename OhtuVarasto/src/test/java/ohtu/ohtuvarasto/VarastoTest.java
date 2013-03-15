@@ -82,7 +82,7 @@ public class VarastoTest {
     public void otataanEnemmanKuinVoidaanjaSaldoNolla(){
         varasto.lisaaVarastoon(8);
         varasto.otaVarastosta(13);
-        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(4, varasto.getSaldo(), vertailuTarkkuus);
     }
     
     @Test
