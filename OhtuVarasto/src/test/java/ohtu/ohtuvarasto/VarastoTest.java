@@ -58,9 +58,10 @@ public class VarastoTest {
     @Test
     public void otataanEnemmanKuinVoidaan(){
         varasto.lisaaVarastoon(8);
-        double saatuMaara = varasto.otaVarastosta(15);
+        double saatuMaara = varasto.otaVarastosta(10);
         assertEquals(8, saatuMaara, vertailuTarkkuus);
     }
+    
     @Test
     public void ottaminenLisääTilaa() {
         varasto.lisaaVarastoon(8);
