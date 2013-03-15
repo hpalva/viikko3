@@ -25,10 +25,17 @@ public class VarastoTest {
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
     @Test
-    public void konstruktorillaVaaraParametri(){
+    public void konstruktorillaNegatiivinenParametri(){
         varasto = new Varasto(-3);
         assertEquals(0, varasto.getTilavuus(), vertailuTarkkuus);
     }
+    
+    @Test
+    public void toisellakonstruktorillaNegatiivinenParametri(){
+        varasto = new Varasto(-3,2);
+        assertEquals(0, varasto.getTilavuus(), vertailuTarkkuus);
+    }
+    
     @Test
     public void uudellaVarastollaOikeaTilavuus() {
         assertEquals(10, varasto.getTilavuus(), vertailuTarkkuus);
@@ -69,6 +76,13 @@ public class VarastoTest {
         varasto.lisaaVarastoon(8);
         double saatuMaara = varasto.otaVarastosta(10);
         assertEquals(8, saatuMaara, vertailuTarkkuus);
+    }
+    
+    @Test
+    public void otataanEnemmanKuinVoidaanjaSaldoNolla(){
+        varasto.lisaaVarastoon(8);
+        varasto.otaVarastosta(13);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
     
     @Test
