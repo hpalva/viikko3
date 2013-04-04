@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 masrysh
+=======
+mddjkd
+>>>>>>> eka
